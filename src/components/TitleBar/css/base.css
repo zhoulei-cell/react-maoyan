@@ -1,0 +1,29 @@
+
+.title-bar{
+  height: 44px;
+  background-color: red;
+  color: #fff;
+}
+
+.title-bar .title-bar-left{
+  float: left;
+  font-size: 16px;
+}
+
+.title-bar .title-bar-right{
+  float: right;
+  font-size: 16px;
+}
+
+.title-bar .title-bar-left,.title-bar .title-bar-center,.title-bar .title-bar-right{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.title-bar .title-bar-center{
+  font-size: 18px;
+  font-weight: bold;
+}

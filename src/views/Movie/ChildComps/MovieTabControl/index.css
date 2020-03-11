@@ -1,0 +1,61 @@
+.tab-control{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 44px;
+  border-bottom: 1px solid #ccc;
+  font-size: 15px;
+}
+
+.tab-control .city-entry{
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+}
+
+.tab-control .movie-class-switch{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+}
+
+.tab-control .movie-class-switch .movie-class-item{
+  padding: 0 15px;
+}
+.tab-control .movie-class-switch .movie-class-item.active h2{
+  color: red;
+}
+.tab-control .movie-class-switch .movie-class-item h2{
+  color: #777;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.tab-control .movie-class-switch .tab-link{
+  position: absolute;
+  bottom: -1px;
+  width: 50%;
+  height: 1px;
+  background-color: red;
+  transition: all .5s;
+}
+
+.tab-control .movie-class-switch .tab-link.nowPlaying{
+  transform: translateX(0);
+}
+
+.tab-control .movie-class-switch .tab-link.comingSoon{
+  transform: translateX(100%);
+}
+
+.tab-control .search-entry{
+  display: flex;
+  align-items: center;
+  padding: 0 15px 0 10px;
+}
+
+.tab-control .search-entry .iconfont{
+  color: red;
+  font-size: 20px;
+}
