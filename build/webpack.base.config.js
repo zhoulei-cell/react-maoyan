@@ -18,6 +18,26 @@ module.exports = {
       {
         test: /\.jsx?$/,
         use: "babel-loader"
+      },
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader", {
+          loader: "postcss-loader",
+          options: {
+            plugins: [
+              require('autoprefixer')
+            ]
+          }
+        }]
+      },
+      {
+        test: /\.(png|jpg|gif)$/,
+        use: {
+          loader: "url-loader",
+          options: {
+            limit: 8192
+          }
+        }
       }
     ]
   },
