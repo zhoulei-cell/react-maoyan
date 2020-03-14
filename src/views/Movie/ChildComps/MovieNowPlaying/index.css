@@ -1,0 +1,8 @@
+.now-playing-wrap{
+  flex: 1;
+  overflow: auto;
+}
+
+.now-playing-wrap .nwo-playing-list{
+  padding: 5px 10px 0;
+}

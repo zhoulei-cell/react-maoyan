@@ -1,8 +1,13 @@
 import React from "react"
+import "./index.css"
+
+import NowPlayingList from "./ChildComps/NowPlayingList"
 
 function NowPlaying() {
   return (
-    <div className="now-playing-wrap">正在热映</div>
+    <div className="now-playing-wrap">
+      <NowPlayingList />
+    </div>
   )
 }
 
