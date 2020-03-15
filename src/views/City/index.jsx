@@ -1,8 +1,20 @@
 import React from "react"
+import "./index.css"
+
+import CityHeader from "./ChildComps/CityHeader"
+import CityList from "./ChildComps/CityList"
+
+import AlphabetIndex from "@/components/AlphabetIndex"
 
 function City() {
   return (
-    <div>城市页面</div>
+    <div className="city-wrap">
+      <CityHeader/>
+      <div className="city-list">
+        <CityList/>
+      </div>
+      <AlphabetIndex></AlphabetIndex>
+    </div>
   )
 }
 

@@ -1,0 +1,15 @@
+.alphabet-index{
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.alphabet-index .alphabet-index-list .alphabet-index-list-item{
+  width: 24px;
+  padding: 2px 0;
+  color: #777;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+}

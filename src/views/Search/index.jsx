@@ -1,8 +1,12 @@
 import React from "react"
 
+import SearchHeader from "./ChildComps/SearchHeader"
+
 function Search() {
   return (
-    <div>搜索页面</div>
+    <div className="movie-search">
+      <SearchHeader />
+    </div>
   )
 }
 

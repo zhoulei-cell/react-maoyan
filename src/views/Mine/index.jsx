@@ -1,15 +1,12 @@
-import React, { Fragment } from "react"
-import TabBar from "@/components/TabBar"
+import React from "react"
 import "./index.css"
+import MineHeader from "./ChildComps/MineHeader"
 
 function Mine() {
   return (
-    <Fragment>
-      <div className="main">
-        
-      </div>
-      <TabBar/>
-    </Fragment>
+    <div className="main">
+      <MineHeader/>
+    </div>
   )
 }
 

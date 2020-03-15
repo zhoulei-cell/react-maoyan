@@ -1,10 +1,6 @@
-.city-wrap{
+.movie-search{
   display: flex;
   flex-direction: column;
   overflow: hidden;
   height: 100%;
-}
-
-.city-wrap .city-list{
-  flex: 1;
 }

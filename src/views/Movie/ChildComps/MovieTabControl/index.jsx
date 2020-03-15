@@ -1,4 +1,4 @@
-import React from "react"
+import React, { memo } from "react"
 import classNames from "classnames"
 import "./index.css"
 
@@ -29,4 +29,4 @@ function MovieTabControl(props) {
   )
 }
 
-export default MovieTabControl
+export default memo(MovieTabControl)
