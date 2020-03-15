@@ -1,0 +1,15 @@
+.city-list-box .city-list-title{
+  height: 35px;
+  color: #777;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 35px;
+}
+
+.city-list-box .city-sort-list .city-sort-list-item{
+  height: 28px;
+  border-bottom: 1px solid #ccc;
+  color: #333;
+  font-size: 12px;
+  line-height: 28px;
+}

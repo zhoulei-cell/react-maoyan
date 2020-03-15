@@ -7,7 +7,7 @@ function SearchHeader(props) {
     props.history.goBack()
   }
   return (
-    <TitleBar leftText="返回" leftHandle={back}>猫眼电影</TitleBar>
+    <TitleBar leftIcon="icon-fanhui1" leftHandle={back}>猫眼电影</TitleBar>
   )
 }
 

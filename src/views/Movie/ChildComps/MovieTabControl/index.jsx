@@ -23,7 +23,7 @@ function MovieTabControl(props) {
         <div className={`tab-link ${category}`}></div>
       </div>
       <div className="search-entry" onClick={goSearch}>
-        <i className="iconfont icon-htmal5icon25"></i>
+        <i className="iconfont icon-search"></i>
       </div>
     </div>
   )

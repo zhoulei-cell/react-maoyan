@@ -7,7 +7,7 @@ function CityHeader(props) {
     props.history.goBack()
   }
   return (
-    <TitleBar leftText="返回" leftHandle={back}>城市选择</TitleBar>
+    <TitleBar leftIcon="icon-fanhui1" leftHandle={back}>城市选择</TitleBar>
   )
 }
 
