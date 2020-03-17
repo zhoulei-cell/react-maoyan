@@ -46,9 +46,16 @@
 }
 
 .movie-card-info .line-ellipsis{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   color: #666;
   font-size: 13px;
   line-height: 20px;
+}
+
+.movie-card-info .line-ellipsis span{
+  color: orange;
 }
 
 .movie-card-mall span.btn{

@@ -1,4 +1,4 @@
-import * as TYPE from "../../action-types"
+import * as TYPE from "@store/action-types"
 
 const city = {
 

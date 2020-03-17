@@ -1,13 +1,13 @@
-import React, {Fragment} from "react"
+import React, { Fragment } from "react"
 
 import CityListHot from "../CityListHot"
 import CityListItem from "../CityListItem"
 
-function CityList() {
+function CityList(props) {
   return (
     <Fragment>
-      <CityListHot />
-      <CityListItem />
+      <CityListHot hotList={props.hotList}/>
+      <CityListItem cityList={props.cityList}/>
     </Fragment>
   )
 }

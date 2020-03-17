@@ -9,7 +9,13 @@ module.exports = {
   },
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "../src")
+      "@": path.resolve(__dirname, "../src"),
+      "@store": "@/store",
+      "@components": "@/components",
+      "@routes": "@/routes",
+      "@views": "@/views",
+      "@assets": "@/assets",
+      "@network": path.resolve(__dirname, "../network")
     },
     extensions: [".js", ".jsx", ".json", ".css"]
   },

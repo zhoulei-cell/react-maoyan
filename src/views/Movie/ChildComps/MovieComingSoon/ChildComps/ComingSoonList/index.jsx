@@ -2,11 +2,16 @@ import React from "react"
 
 import ComingSoonListCard from "../ComingSoonListCard"
 
-function ComingSoonList() {
+function ComingSoonList(props) {
+  const { comingSoonList } = props
   return (
-    <div className="coming-soon-list">
-      <ComingSoonListCard/>
-    </div>
+    <ul className="coming-soon-list">
+      {
+        comingSoonList.map(item => (
+          <ComingSoonListCard item={item} key={item.id}/>
+        ))
+      }
+    </ul>
   )
 }
 

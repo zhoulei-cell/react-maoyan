@@ -1,14 +1,14 @@
 import React from "react"
 import "./css/base.css"
 
-function AlphabetIndex() {
-  const arr = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "p", "u", "v", "w", "x", "y", "z"]
+function AlphabetIndex(props) {
+  const { alphabet } = props
   return (
     <div className="alphabet-index">
       <ul className="alphabet-index-list">
         {
-          arr.map((item, index) => (
-            <li className="alphabet-index-list-item" key={index}>{item.toUpperCase()}</li>
+          alphabet.map(item => (
+            <li className="alphabet-index-list-item" key={item}>{item}</li>
           ))
         }
       </ul>

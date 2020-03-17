@@ -9,7 +9,7 @@ function MovieTabControl(props) {
   return (
     <div className="tab-control">
       <div className="city-entry" onClick={goCity}>
-        <span>{city}</span>
+        <span>{city.cityName}</span>
         <i className="iconfont icon-xiajiantou"></i>
       </div>
       <div className="movie-class-switch">

@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react"
+import React, { Fragment, useState, useEffect } from "react"
 import { useSelector, useDispatch } from "react-redux"
 
 import action from "@/store/actions"
@@ -38,8 +38,8 @@ function Movie(props) {
       <div className="main">
         <MovieHeader/>
         <MovieTabControl goCity={goCity} goSearch={goSearch} category={category} handleCategory={handleCategory} city={city}/>
-        {category === "nowPlaying" ? <MovieNowPlaying/> : null}
-        {category === "comingSoon" ? <MovieComingSoon/> : null}
+        {category === "nowPlaying" ? <MovieNowPlaying city={city}/> : null}
+        {category === "comingSoon" ? <MovieComingSoon city={city}/> : null}
       </div>
       <TabBar/>
     </Fragment>

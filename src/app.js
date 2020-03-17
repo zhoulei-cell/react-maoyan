@@ -1,6 +1,7 @@
 import React from "react"
 import { HashRouter as Router, Route, Switch, Redirect } from "react-router-dom"
 import { Provider } from "react-redux"
+import Loading from "./components/Loading"
 
 import store from "./store"
 import { routes } from "./routes"
@@ -19,6 +20,7 @@ function App() {
           <Redirect to="/movie"/>
         </Switch>
       </Router>
+      <Loading />
     </Provider>
   )
 }
