@@ -14,6 +14,9 @@ function Scroll(props) {
 
   useEffect(() => {
     _initScroll()
+    return () => {
+      scroll.current.off("scroll")
+    }
   }, [])
 
   useEffect(() => {

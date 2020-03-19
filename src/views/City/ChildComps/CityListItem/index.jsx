@@ -7,11 +7,12 @@ import "./index.css"
 function CityListItem(props) {
   let { cityList } = props
   const dispatch = useDispatch()
-  console.log(props)
+
   function setCity(city) {
     dispatch(action.city.setCity(city))
     props.history.goBack()
   }
+  
   return (
     cityList.map(item => (
       <div className="city-list-box" key={item.key}>
