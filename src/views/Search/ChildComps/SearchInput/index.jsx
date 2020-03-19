@@ -1,8 +1,9 @@
 import React from 'react'
 import "./index.css"
 
-function SearchInput(props) {
-  let {value, searchHandle} = props
+const SearchInput = (props) => {
+  const {value, searchHandle} = props
+  
   return (
     <div className="search-input-wrap">
       <div className="search-input-box">

@@ -1,41 +1,15 @@
 import React, { useEffect, useRef, useState } from 'react'
 import BScroll from "@better-scroll/core"
-
-import throttle from "@utils/throttle"
-
 import "./css/base.css"
 
-function Scroll(props) {
+const Scroll = (props) => {
   const { children, listEl, currentIndex, listenScroll } = props
   const scrollEl = useRef(null)
   const scroll = useRef(null)
   const scrollElHeight = useRef([])
   const [scrollY, setScrollY] = useState(0)
-
-  useEffect(() => {
-    _initScroll()
-    return () => {
-      scroll.current.off("scroll")
-    }
-  }, [])
-
-  useEffect(() => {
-    _refresh()
-  }, [children])
-
-  useEffect(() => {
-    scrollElHeight.current = listHeightArr()
-  }, [listEl])
-
-  useEffect(() => {
-    listEl[currentIndex] && scroll.current.scrollToElement(listEl[currentIndex])
-  }, [currentIndex])
-
-  useEffect(() => {
-    syncIndex()
-  }, [scrollY])
   
-  function _initScroll() {
+  const _initScroll = () => {
     scroll.current = new BScroll(scrollEl.current, {
       probeType: 3,
       click: true
@@ -44,35 +18,33 @@ function Scroll(props) {
       setScrollY(pos.y)
     })
   }
-  function _refresh() {
+  const _refresh = () => {
     scroll.current.refresh()
   }
-
-  let setIndex = throttle((index) => {
+  const setIndex = (index) => {
     props.setActiveIndex(index)
-  }, 100)
-  
-  function syncIndex() {
+  }
+  const syncIndex = () => {
     let arr = scrollElHeight.current
     let length = arr.length
+    let y = Math.abs(scrollY)
     if (length < 0) {
       return
     }
-    if (-scrollY <= arr[0]) {
+    if (y <= arr[0]) {
       return setIndex(0)
     }
-    arr.forEach((height, index) => {
-      if (-scrollY > height && -scrollY < arr[index + 1]) {
-        setIndex(index)
+    for (var i = 0; i < length - 1; i++) {
+      if (y > arr[i] && y <= arr[i + 1]) {
+        setIndex(i)
       }
-    })
+    }
     if (-scrollY > arr[length-1]) {
-      setIndex(length - 1)
+      return setIndex(length - 1)
     }
 
   }
-
-  function listHeightArr() {
+  const listHeightArr = () => {
     let arr = []
     let height = 0;
     listEl.forEach(item => {
@@ -81,6 +53,25 @@ function Scroll(props) {
     })
     return arr
   }
+
+  useEffect(() => {
+    _initScroll()
+    return () => {
+      scroll.current.off("scroll")
+    }
+  }, [])
+  useEffect(() => {
+    _refresh()
+  }, [children])
+  useEffect(() => {
+    scrollElHeight.current = listHeightArr()
+  }, [listEl])
+  useEffect(() => {
+    listEl[currentIndex] && scroll.current.scrollToElement(listEl[currentIndex])
+  }, [currentIndex])
+  useEffect(() => {
+    syncIndex()
+  }, [scrollY])
 
   return (
     <div className="scroll-wrapper" ref={scrollEl}>

@@ -1,6 +1,6 @@
 import React from 'react'
 
-function MineForm() {
+const MineForm = () => {
   return (
     <div>
       

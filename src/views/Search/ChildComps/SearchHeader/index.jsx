@@ -1,9 +1,9 @@
 import React, { memo } from "react"
 import { withRouter } from "react-router-dom"
-
 import TitleBar from "@/components/TitleBar"
-function SearchHeader(props) {
-  function back() {
+
+const SearchHeader = (props) => {
+  const back = () => {
     props.history.goBack()
   }
   return (

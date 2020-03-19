@@ -2,7 +2,7 @@ import React from "react"
 import "./index.css"
 import MineHeader from "./ChildComps/MineHeader"
 
-function Mine() {
+const Mine = () => {
   return (
     <div className="main">
       <MineHeader/>

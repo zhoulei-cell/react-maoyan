@@ -2,7 +2,7 @@ import React from "react"
 import classNames from "classnames"
 import "./css/base.css"
 
-function AlphabetIndex(props) {
+const AlphabetIndex = (props) => {
   const { alphabet, setIndex, activeIndex } = props
   return (
     <div className="alphabet-index">

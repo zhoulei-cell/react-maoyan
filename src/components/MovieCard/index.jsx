@@ -1,11 +1,9 @@
 import React from "react"
 import classNames from "classnames"
-
 import "./css/base.css"
-
 import image from "./images/3d.png"
 
-function MovieCard(props) {
+const MovieCard = (props) => {
   let btnClassName = classNames(["btn",{orange: props.mall === "购票"}, {blue: props.mall === "预购"}])
   return (
     <li className="movie-card">

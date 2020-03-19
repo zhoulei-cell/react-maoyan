@@ -1,3 +1,7 @@
 export const CITY_SET = "CITY_SET"
 
 export const LOAD_SET = "LOAD_SET"
+
+export const COMINGSOON_UPDATE = "COMINGSOON_UPDATE"
+
+export const NOWPLAYING_UPDATE = "NOWPLAYING_UPDATE"

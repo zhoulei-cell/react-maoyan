@@ -4,11 +4,11 @@ import { useDispatch } from "react-redux"
 import action from "@store/actions"
 import "./index.css"
 
-function CityListItem(props) {
-  let { cityList } = props
+const CityListItem = (props) => {
+  const { cityList } = props
   const dispatch = useDispatch()
 
-  function setCity(city) {
+  const setCity = (city) => {
     dispatch(action.city.setCity(city))
     props.history.goBack()
   }

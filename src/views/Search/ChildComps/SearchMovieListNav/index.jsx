@@ -1,6 +1,6 @@
 import React from 'react'
 
-function SearchMovieListNav() {
+const SearchMovieListNav = () => {
   return (
     <div>
       

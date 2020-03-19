@@ -1,9 +1,9 @@
 import React, { Fragment } from "react"
 import TabBar from "@/components/TabBar"
+import CinemaHeader from "./ChildComps/CinemaHeader"
 import "./index.css"
 
-import CinemaHeader from "./ChildComps/CinemaHeader"
-function Cinema() {
+const Cinema = () => {
   return (
     <Fragment>
       <div className="main">

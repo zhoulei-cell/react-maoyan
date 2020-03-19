@@ -16,7 +16,7 @@ module.exports = {
       "@views": "@/views",
       "@assets": "@/assets",
       "@utils": "@/utils",
-      "@network": path.resolve(__dirname, "../network")
+      "@network": "@/network"
     },
     extensions: [".js", ".jsx", ".json", ".css"]
   },

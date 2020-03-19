@@ -1,5 +1,4 @@
 import React from "react"
-
 import CityListHot from "../CityListHot"
 import CityListItem from "../CityListItem"
 

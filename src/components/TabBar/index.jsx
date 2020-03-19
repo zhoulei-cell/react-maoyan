@@ -2,7 +2,7 @@ import React, {memo} from "react"
 import { NavLink } from "react-router-dom"
 import "./css/base"
 
-function TabBar() {
+const TabBar = () => {
   return (
     <ul className="tab-bar">
       <li className="tab-bar-item">

@@ -3,9 +3,9 @@ import classNames from "classnames"
 import "./index.css"
 
 function MovieTabControl(props) {
-  let {goCity, goSearch, category, handleCategory, city} = props
-  let nowPlaying = classNames("movie-class-item", {active: category === "nowPlaying"})
-  let comingSoon = classNames("movie-class-item", {active: category === "comingSoon"})
+  const {goCity, goSearch, category, handleCategory, city} = props
+  const nowPlaying = classNames("movie-class-item", {active: category === "nowPlaying"})
+  const comingSoon = classNames("movie-class-item", {active: category === "comingSoon"})
   return (
     <div className="tab-control">
       <div className="city-entry" onClick={goCity}>

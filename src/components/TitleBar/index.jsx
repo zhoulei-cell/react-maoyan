@@ -1,7 +1,7 @@
 import React from "react"
 import "./css/base.css"
 
-function TitleBar(props) {
+const TitleBar = (props) => {
   return (
     <div className="title-bar">
       {
@@ -11,7 +11,6 @@ function TitleBar(props) {
             {props.leftText ? <span className="left-text">{props.leftText}</span> : null}
           </div>) : null
       }
-      
       {
         props.rightIcon || props.rightText ? (
           <div className="title-bar-right" onClick={props.rightHandle}>
@@ -20,11 +19,9 @@ function TitleBar(props) {
           </div>
         ) : null
       }
-
       <div className="title-bar-center">
         {props.children}
       </div>
-      
     </div>
   )
 }

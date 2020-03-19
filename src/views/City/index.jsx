@@ -1,16 +1,13 @@
 import React, { useState, useEffect, useRef } from "react"
-import "./index.css"
-
 import { getCityList } from "@network/api/city"
-
 import BScroll from "@components/BScroll"
 import CityHeader from "./ChildComps/CityHeader"
 import CityList from "./ChildComps/CityList"
-
 import AlphabetIndex from "@/components/AlphabetIndex"
+import "./index.css"
 
-function City() {
-  
+const City = () => {
+  const ref = useRef(null)
   const [hotList, setHotList] = useState([])
   const [cityList, setCityList] = useState([])
   const [alphabet, setAlphabet] = useState([])
@@ -18,17 +15,7 @@ function City() {
   const [activeIndex, setActiveIndex] = useState(0)
   const [listEl, setListEl] = useState([])
 
-  const ref = useRef(null)
-
-  useEffect(() => {
-    getListEl()
-  }, [hotList, cityList])
-
-  useEffect(() => {
-    getData()
-  },[])
-
-  function getData() {
+  const getData = () => {
     let cities = window.localStorage.getItem("my_city")
     if (cities) {
       let { alphabet, hotList, cityList } = formatCityList(JSON.parse(cities))
@@ -47,12 +34,16 @@ function City() {
     }
   }
 
-  function getListEl() {
+  const getListEl = () => {
     const list = ref.current.children
     setListEl([].slice.call(list))
   }
 
-  function formatCityList(cities) {
+  const formatCityList = (cities) => {
+    const checkExist = (arr, key) => {
+      let isExist = arr.some(item => item.key === key)
+      return isExist
+    }
     let hotList = cities.filter(item => item.isHot === 1)
     let cityList = []
     let alphabet = []
@@ -69,26 +60,28 @@ function City() {
         alphabet.push(key)
       }
     })
-
-    function checkExist(arr, key) {
-      let isExist = arr.some(item => item.key === key)
-      return isExist
-    }
     alphabet.sort((a, b) => a.localeCompare(b))
     alphabet.unshift("#")
     cityList.sort((a, b) => a.key.localeCompare(b.key))
-
     return {
       alphabet,
       hotList,
       cityList
     }
   }
-
-  function setIndex(index) {
+  
+  const setIndex = (index) => {
     setCurrentIndex(index)
     setActiveIndex(index)
   }
+
+  useEffect(() => {
+    getListEl()
+  }, [hotList, cityList])
+
+  useEffect(() => {
+    getData()
+  },[])
 
   return (
     <div className="city-wrap">

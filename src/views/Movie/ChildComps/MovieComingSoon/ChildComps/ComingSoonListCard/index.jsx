@@ -1,8 +1,7 @@
 import React, { memo } from "react"
-
 import MovieCard from "@/components/MovieCard"
 
-function ComingSoonListCard(props) {
+const ComingSoonListCard = (props) => {
   const { item } = props
   return (
     <MovieCard 

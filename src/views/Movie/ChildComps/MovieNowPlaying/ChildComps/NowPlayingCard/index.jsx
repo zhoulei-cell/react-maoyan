@@ -1,9 +1,8 @@
 import React, { memo } from "react"
-
 import MovieCard from "@/components/MovieCard"
 
-function NowPlayingCard(props) {
-  let { item } = props
+const NowPlayingCard = (props) => {
+  const { item } = props
   return (
     <MovieCard 
       mall="购票" 
