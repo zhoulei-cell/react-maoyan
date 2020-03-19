@@ -15,6 +15,7 @@ module.exports = {
       "@routes": "@/routes",
       "@views": "@/views",
       "@assets": "@/assets",
+      "@utils": "@/utils",
       "@network": path.resolve(__dirname, "../network")
     },
     extensions: [".js", ".jsx", ".json", ".css"]

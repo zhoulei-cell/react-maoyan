@@ -13,3 +13,9 @@
   font-weight: bold;
   text-align: center;
 }
+
+.alphabet-index .alphabet-index-list .alphabet-index-list-item.active{
+  border-radius: 10px;
+  background-color: orange;
+  color: #fff;
+}
