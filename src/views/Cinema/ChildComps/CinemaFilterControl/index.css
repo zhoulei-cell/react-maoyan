@@ -1,0 +1,32 @@
+
+.filter-control{
+  height: 40px;
+  border-bottom: 1px solid #ccc;
+}
+
+.filter-control .tab-list{
+  display: flex;
+}
+
+.filter-control .tab-list .tab-item{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  color: #666;
+}
+
+.filter-control .tab-list .tab-item.line{
+  position: relative;
+}
+
+.filter-control .tab-list .tab-item.line::before{
+  content: "";
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  height: 20px;
+  border-left: 1px solid #e8e8e8;
+}

@@ -1,0 +1,22 @@
+
+.user-form{
+  padding-left: 10px;
+}
+
+.user-form .input-box{
+  padding: 7px 10px 7px 0;
+}
+
+.user-form .input-box.border{
+  border-bottom: 1px solid #ccc;
+}
+
+.user-form .btn-box{
+  padding-right: 10px;
+}
+
+.user-form .btn-box .btn{
+  margin-top: 10px;
+  background-color: red;
+  color: #fff;
+}

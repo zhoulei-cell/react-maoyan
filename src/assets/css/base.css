@@ -30,6 +30,12 @@ html,body,#root{
   height: 100%;
 }
 
+input{
+  padding: 0;
+  border: none;
+  outline: none;
+}
+
 #root{
   display: flex;
   flex-direction: column;
@@ -39,4 +45,10 @@ html,body,#root{
   display: flex;
   flex-direction: column;
   overflow: hidden;
+}
+
+.t-of-h{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }

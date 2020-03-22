@@ -3,6 +3,7 @@ import Cinema from "@/views/Cinema"
 import Mine from "@/views/Mine"
 import City from "@/views/City"
 import Search from "@/views/Search"
+import Login from "@/views/Login"
 
 export const routes = [
   {
@@ -24,5 +25,9 @@ export const routes = [
   {
     path: "/search",
     component: Search
+  },
+  {
+    path: "/login",
+    component: Login
   }
 ]

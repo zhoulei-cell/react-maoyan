@@ -58,7 +58,7 @@
   color: orange;
 }
 
-.movie-card-mall span.btn{
+.movie-card-mall span.but{
   display: block;
   padding: 6px 10px;
   border-radius: 5px;
@@ -66,10 +66,10 @@
   color: #fff;
 }
 
-.movie-card-mall span.btn.orange{
+.movie-card-mall span.but.orange{
   background-color: orange;
 }
 
-.movie-card-mall span.btn.blue{
+.movie-card-mall span.but.blue{
   background-color: #3c9fe6;
 }

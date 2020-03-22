@@ -2,6 +2,9 @@ const path = require("path")
 const merge = require("webpack-merge")
 const baseConfig = require("./webpack.base.config")
 
+const cinemaList = require("../src/mock/cinemaList.json")
+const filterCinemas = require("../src/mock/filterCinemas.json")
+
 module.exports = merge(baseConfig, {
   mode: "development",
   devtool: "source-map",
@@ -14,7 +17,21 @@ module.exports = merge(baseConfig, {
     proxy: {
       "/api": {
         target: "http://39.97.33.178"
+      },
+      "/ajax": {
+        target: "http://m.maoyan.com"
       }
+    },
+    before(app) {
+
+     app.get("/cinemaList", (req, res) => {
+       res.json(cinemaList)
+     })
+
+     app.get("/filterCinemas", (req, res) => {
+       res.json(filterCinemas)
+     })
+
     }
   }
 })

@@ -1,0 +1,53 @@
+
+.cinema-list{
+  padding: 0 20px;
+}
+
+.cinema-list .cinema-list-item{
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.cinema-list .cinema-list-item .title{
+  height: 28px;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+.cinema-list .cinema-list-item .address{
+  display: flex;
+  height: 24px;
+  color: #666;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.cinema-list .cinema-list-item .address .addr{
+  flex: 1;
+}
+
+.cinema-list .cinema-list-item .address .distance{
+  padding:0 10px 0 30px;
+}
+
+.cinema-list .cinema-list-item .tag-box .tag{
+  display: inline-block;
+  padding:0 5px;
+  margin-right: 5px;
+  margin-top: 5px;
+  border-radius: 3px;
+  font-size: 12px;
+  
+}
+
+.cinema-list .cinema-list-item .tag-box .tag.yellow{
+  border: 1px solid #f90;
+  color: #f90;
+  
+}
+
+.cinema-list .cinema-list-item .tag-box .tag.blue{
+  border: 1px solid #589daf;
+  color: #589daf;
+  
+}

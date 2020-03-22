@@ -4,7 +4,7 @@ import "./css/base.css"
 import image from "./images/3d.png"
 
 const MovieCard = (props) => {
-  let btnClassName = classNames(["btn",{orange: props.mall === "购票"}, {blue: props.mall === "预购"}])
+  let btnClassName = classNames(["but",{orange: props.mall === "购票"}, {blue: props.mall === "预购"}])
   return (
     <li className="movie-card">
       <div className="movie-card-pic">
