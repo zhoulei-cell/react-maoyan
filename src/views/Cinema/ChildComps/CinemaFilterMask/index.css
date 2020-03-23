@@ -1,0 +1,44 @@
+
+
+.mask-layer{
+  position: fixed;
+  width: 100%;
+  height: calc(100% - 128px);
+  background-color: rgba(0,0,0,.3)
+}
+
+.mask-layer .all-city{
+  position: absolute;
+  top: 0;
+  bottom: 50px;
+  width: 100%;
+  background-color: #fff;
+}
+
+.mask-layer .all-city .all-city-nav{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+.mask-layer .all-city .all-city-nav .city-nav-item{
+  flex: 1;
+  height: 45px;
+  color: #666;
+  font-size: 14px;
+  line-height: 45px;
+  text-align: center;
+}
+
+.mask-layer .all-city .all-city-nav .line{
+  position: absolute;
+  bottom: 0;
+  width: 50%;
+  height: 2px;
+  background-color: red;
+  transition: all .3s;
+}
+
+.mask-layer .all-city .all-city-nav .line.active{
+  transform: translate(100%, 0);
+}

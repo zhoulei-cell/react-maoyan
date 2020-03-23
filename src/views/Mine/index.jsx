@@ -1,13 +1,16 @@
 import React, { Fragment } from "react"
-import MineHeader from "./ChildComps/MineHeader"
 import TabBar from "@/components/TabBar"
-import "./index.css"
+import MineHeader from "./ChildComps/MineHeader"
+import MineCenter from "./ChildComps/MineCenter"
+import MineContainer from "./ChildComps/MineContainer"
 
 const Mine = () => {
   return (
     <Fragment>
       <div className="main">
         <MineHeader/>
+        <MineCenter/>
+        <MineContainer/>
       </div>
       <TabBar/>
     </Fragment>

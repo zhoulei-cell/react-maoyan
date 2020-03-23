@@ -19,3 +19,18 @@ export function getComingSoon(cityId) {
     })
   })
 }
+
+export function searchFilms(cityId, kw) {
+  return new Promise(resolve => {
+    axios.get("/api/searchList", {
+      params: {
+        cityId,
+        kw
+      }
+    }).then(res => {
+      resolve(res)
+    }).catch(err => {
+      throw new Error("Server request error: " + err)
+    })
+  })
+}

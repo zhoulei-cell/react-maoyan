@@ -1,5 +1,4 @@
 import React from "react"
-import classNames from "classnames"
 import "./index.css"
 
 const tagName = {
@@ -12,7 +11,6 @@ const tagName = {
 
 function CinemaList(props) {
   const { cinemaList } = props
-  console.log(cinemaList)
   return (
     <ul className="cinema-list">
       {

@@ -1,0 +1,12 @@
+.mine-center{
+  height: 150px;
+  background-color: #f03d37;
+  text-align: center;
+}
+
+.mine-center img.icon{
+  width: 60px;
+  height: 60px;
+  margin-top: 30px;
+  border-radius: 60px;
+}

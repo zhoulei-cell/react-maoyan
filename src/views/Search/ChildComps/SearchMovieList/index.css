@@ -1,0 +1,9 @@
+
+.search-list-wrap{
+  flex: 1;
+  overflow-y: auto;
+}
+
+.search-list-wrap .search-list{
+  padding-left: 10px;
+}
